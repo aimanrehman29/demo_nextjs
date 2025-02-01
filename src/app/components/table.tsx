@@ -6,9 +6,7 @@ const Table = () => {
   return (
     <div>
       <div className="container mx-auto p-4">
-        {/* 🔹 Sold Info Section */}
         <div className="bg-black text-white px-6 rounded-lg text-lg flex flex-col sm:flex-row justify-between items-center">
-          {/* Left Section - Sold Price */}
           <div className="flex flex-col sm:flex-row items-center  sm:gap-4">
             <span className="text-center sm:text-left text-xl font-semibold">
               Sold for <br />
@@ -16,15 +14,18 @@ const Table = () => {
             </span>
           </div>
 
-          {/* Right Section - Date, Bids & Comments */}
           <div className="flex flex-col sm:flex-row items-center md:gap-0 lg:gap-4 mt-1 sm:mt-0">
             <span className="text-sm sm:text-base">1/27/25</span>
-            <span className="text-sm sm:text-base">Bids: <strong>25</strong></span>
-            <span className="text-sm sm:text-base"> Comments: <strong>35</strong></span>
+            <span className="text-sm sm:text-base">
+              Bids: <strong>25</strong>
+            </span>
+            <span className="text-sm sm:text-base">
+              {" "}
+              Comments: <strong>35</strong>
+            </span>
           </div>
         </div>
 
-        {/* 🔹 Auction End Message */}
         <div className="mt-4 bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded">
           <p>
             This auction has ended, see more Porsche 991 911 auctions{" "}
@@ -35,7 +36,6 @@ const Table = () => {
           </p>
         </div>
 
-        {/* 🔹 Auction Info Section */}
         <div className="mt-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
             <Link href="/" className="flex justify-start gap-1 items-center">
