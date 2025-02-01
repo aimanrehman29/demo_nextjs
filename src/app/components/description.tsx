@@ -16,7 +16,7 @@ const CarDetails = () => {
           </li>
           <li>
             The attached Carfax history report lists no accidents or mileage
-            discrepancies in this GT3's past. It also confirms that this Porsche
+            discrepancies in this GT3s past. It also confirms that this Porsche
             has been registered in Georgia and North Carolina since new.
           </li>
           <li>
@@ -75,9 +75,9 @@ const CarDetails = () => {
       <section>
         <h2 className="text-2xl font-bold mb-4">Known Flaws</h2>
         <ul className="list-disc pl-6 text-gray-700 space-y-2">
-          <li>Some chips and scuffs on front bumper's paint protection film</li>
+          <li>Some chips and scuffs on front bumpers paint protection film</li>
           <li>Scuffs on the underside of the rear diffuser</li>
-          <li>Some creases on driver's seat outer bolster</li>
+          <li>Some creases on drivers seat outer bolster</li>
         </ul>
       </section>
 

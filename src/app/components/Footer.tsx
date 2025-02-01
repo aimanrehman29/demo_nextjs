@@ -5,7 +5,6 @@ import {
   FaFacebook,
   FaTiktok,
   FaTwitter,
-  FaApple,
 } from "react-icons/fa";
 import Services from "./service";
 
