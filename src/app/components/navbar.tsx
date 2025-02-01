@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import {
   AiOutlineHeart,
@@ -9,13 +9,13 @@ import {
 } from "react-icons/ai";
 import { IoBagOutline } from "react-icons/io5";
 import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi";
-import { useState } from "react";
 import { IoLogoAngular, IoIosSearch, IoMdSettings } from "react-icons/io";
 import { FiUser } from "react-icons/fi";
 import { FaUsers, FaShoppingCart } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div>
       <div>
@@ -25,7 +25,7 @@ const Navbar = () => {
               <IoLogoAngular className="w-[40px] h-[40px] lg:w-[70.47px] lg:h-[70.47px]" />
             </Link>
 
-            <div className="hidden lg:flex  text-sm font-medium ml-8">
+            <div className="hidden lg:flex text-sm font-medium ml-8">
               <a
                 href="/allproduct"
                 className="hover:bg-green-500 rounded-full text-[16px] font-bold px-6 py-1"
@@ -58,36 +58,36 @@ const Navbar = () => {
               </a>
             </div>
           </div>
+
           <div className="flex justify-start space-x-4">
-            <div className="relative  md:w-35 lg:max-w-xl flex items-center">
+            <div className="relative flex items-center">
               <input
                 type="text"
                 placeholder="Search..."
-                className="w-full border border-gray-300 rounded-full py-2 px-4 text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-[180px] sm:w-[200px] md:w-[250px] lg:w-full border border-gray-300 rounded-full py-2 px-4 text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
-              <button className="absolute right-4  text-gray-500 cursor-pointer">
+              <button className="absolute right-4 text-gray-500 cursor-pointer">
                 <IoIosSearch />
               </button>
             </div>
+
             <div className="hidden lg:flex items-center">
-              {" "}
               <a
                 href="/allproduct"
-                className="bg-green-500 hover:bg-green-300 rounded-full text-[16px] font-bold px-6 py-3 "
+                className="bg-green-500 hover:bg-green-300 rounded-full text-[16px] font-bold px-6 py-3"
               >
-                sign up
+                Sign Up
               </a>
             </div>
           </div>
 
-          <div className=" lg:hidden cursor-pointer flex items-center space-x-2">
+          <div className="lg:hidden cursor-pointer flex items-center space-x-2">
             <Link href="/checkout">
               <AiOutlineHeart
                 size={20}
                 className="cursor-pointer text-gray-600 hover:text-black"
               />
             </Link>
-
             <Link href="/cart">
               <IoBagOutline
                 size={18}
@@ -107,17 +107,16 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Sidebar */}
+        {/*  Mobile Sidebar Menu */}
         {isOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex">
-            <div className="w-64 bg-white h-full p-6 space-y-6 0">
+            <div className="w-64 bg-white h-full p-6 space-y-6">
               <HiOutlineX
                 size={28}
                 className="cursor-pointer text-black"
                 onClick={() => setIsOpen(false)}
               />
 
-              {/* Sidebar Links */}
               <div className="flex flex-col space-y-4 text-sm font-medium mt-10">
                 <a
                   href="/allproduct"
@@ -159,10 +158,10 @@ const Navbar = () => {
                   <span>Emails</span>
                 </a>
 
-                <div className="flex justify-start space-x-2 mt-[1200px]">
+                <div className="flex justify-start space-x-2 mt-auto">
                   <IoMdSettings size={20} />
                   <Link href={"#"} className="hover:underline text-[16px]">
-                    settings
+                    Settings
                   </Link>
                 </div>
               </div>

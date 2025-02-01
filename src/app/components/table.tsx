@@ -6,21 +6,25 @@ const Table = () => {
   return (
     <div>
       <div className="container mx-auto p-4">
-        <div className="bg-black text-white p-4 rounded-lg text-lg flex justify-between items-center">
-          <span>
-            Sold for <strong>$116,498</strong>
-          </span>
-          <div className="flex space-x-6">
-            <span>1/27/25</span>
-            <span>
-              Bids <strong>25</strong>
+        {/* 🔹 Sold Info Section */}
+        <div className="bg-black text-white px-6 rounded-lg text-lg flex flex-col sm:flex-row justify-between items-center">
+          {/* Left Section - Sold Price */}
+          <div className="flex flex-col sm:flex-row items-center  sm:gap-4">
+            <span className="text-center sm:text-left text-xl font-semibold">
+              Sold for <br />
+              <strong className="text-2xl">$116,498</strong>
             </span>
-            <span>
-              Comments <strong>35</strong>
-            </span>
+          </div>
+
+          {/* Right Section - Date, Bids & Comments */}
+          <div className="flex flex-col sm:flex-row items-center md:gap-0 lg:gap-4 mt-1 sm:mt-0">
+            <span className="text-sm sm:text-base">1/27/25</span>
+            <span className="text-sm sm:text-base">Bids: <strong>25</strong></span>
+            <span className="text-sm sm:text-base"> Comments: <strong>35</strong></span>
           </div>
         </div>
 
+        {/* 🔹 Auction End Message */}
         <div className="mt-4 bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded">
           <p>
             This auction has ended, see more Porsche 991 911 auctions{" "}
@@ -31,22 +35,24 @@ const Table = () => {
           </p>
         </div>
 
+        {/* 🔹 Auction Info Section */}
         <div className="mt-6">
-          <div className="flex justify-between items-center">
-            <Link href="/" className="flex justify-start gap-1 ">
-              <IoLogoAngular className="w-[30px] h-[20px] lg:w-[40.47px] lg:h-[40.47px]" />
-              <h1 className=" font-bold text-green-500 mt-2">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+            <Link href="/" className="flex justify-start gap-1 items-center">
+              <IoLogoAngular className="w-[30px] h-[30px] lg:w-[40.47px] lg:h-[40.47px]" />
+              <h1 className="font-bold text-green-500 text-lg sm:text-xl">
                 Abdan<b className="text-gray-700">&</b>Cars
               </h1>
             </Link>
-            <p className="text-gray-500 text-sm">
+            <p className="text-gray-500 text-sm mt-2 sm:mt-0">
               Ended January 27th at 11:35 PM
             </p>
           </div>
         </div>
 
+        {/* 🔹 Table Section */}
         <div className="mt-4 border rounded-lg overflow-hidden">
-          <table className="w-3/4 mx-auto text-left text-xs border-collapse">
+          <table className="w-full sm:w-3/4 mx-auto text-left text-xs border-collapse">
             <tbody>
               <tr className="border-b">
                 <td className="p-2 font-bold">Make</td>
